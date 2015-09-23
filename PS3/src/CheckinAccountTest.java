@@ -11,7 +11,7 @@ public class CheckinAccountTest {
 	
 	@Before
 	public void setUp() throws Exception{
-		c = new Account(101);
+		c = new Account(1122, 20000);
 	}
 	
 	@After 
@@ -20,11 +20,21 @@ public class CheckinAccountTest {
 	}
 	
 	
-	@Test(expected = InsufficientFundsException.class
+	@Test(expected = InsufficientFundsException.class)
 	public final void testWithdraw() throws InsufficientFundsException {
-		c.deposit(500.00);
-		assertEquals("$400 Expected, actual is $500",(long)c.get)
-		fail("Not yet implemented");
+		c.deposit(3000);
+		assertEquals("$400 Expected, actual is $500",(long)c.getBalance(),(long)500.00);
+	c.withdraw(900);
+	}
+	
+	@Test
+	public final void testDeposit() {
+		int x = 0; 
+				
+		while (x<20) {
+			c.deposit(3000);
+		}
+		
 	}
 
 }
