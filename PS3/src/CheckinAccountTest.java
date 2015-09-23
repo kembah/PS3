@@ -23,7 +23,7 @@ public class CheckinAccountTest {
 	@Test(expected = InsufficientFundsException.class)
 	public final void testWithdraw() throws InsufficientFundsException {
 		c.deposit(3000);
-		assertEquals("$400 Expected, actual is $500",(long)c.getBalance(),(long)500.00);
+		assertEquals("True",(long)c.getBalance(),(long)500.00);
 	c.withdraw(900);
 	}
 	
